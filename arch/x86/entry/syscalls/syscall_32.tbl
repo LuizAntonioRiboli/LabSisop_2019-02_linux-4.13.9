@@ -174,7 +174,7 @@
 165	i386	getresuid		sys_getresuid16
 166	i386	vm86			sys_vm86			sys_ni_syscall
 167	i386	query_module
-168	i386	poll			sys_poll385	i386	listProcessInfo		sys_listProcessInfo
+168	i386	poll			sys_poll
 169	i386	nfsservctl
 170	i386	setresgid		sys_setresgid16
 171	i386	getresgid		sys_getresgid16

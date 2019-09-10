@@ -70,7 +70,7 @@ union bpf_attr;
 
 #include <linux/types.h>
 #include <linux/aio_abi.h>
-#include <linux/capability.h>asmlinkage long sys_listProcessInfo(long pid, const char __user *buf, int size);
+#include <linux/capability.h>
 #include <linux/signal.h>
 #include <linux/list.h>
 #include <linux/bug.h>
@@ -348,7 +348,7 @@ asmlinkage long sys_sigsuspend(old_sigset_t mask);
 
 #ifdef CONFIG_OLD_SIGSUSPEND3
 asmlinkage long sys_sigsuspend(int unused1, int unused2, old_sigset_t mask);
-#endifasmlinkage long sys_listProcessInfo(long pid, const char __user *buf, int size);
+#endif
 
 asmlinkage long sys_rt_sigsuspend(sigset_t __user *unewset, size_t sigsetsize);
 
@@ -905,7 +905,5 @@ asmlinkage long sys_pkey_alloc(unsigned long flags, unsigned long init_val);
 asmlinkage long sys_pkey_free(int pkey);
 asmlinkage long sys_statx(int dfd, const char __user *path, unsigned flags,
 			  unsigned mask, struct statx __user *buffer);
-
-#endif
-
 asmlinkage long sys_listProcessInfo(long pid, const char __user *buf, int size);
+#endif
